@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation & Second Home Mortgages Ontario | Cottage & Seasonal Properties | The Mortgage Hunter</title>
     <meta name="description" content="Financing vacation properties, cottages, and second homes in Ontario. Down payment requirements, seasonal property considerations, and lender restrictions explained.">
@@ -299,6 +300,13 @@
     document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
         document.querySelector(".nav").classList.toggle("nav-open");
         this.classList.toggle("active");
+    });
+    var dropdown = document.querySelector(".nav-dropdown > a");
+    dropdown.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("dropdown-open");
+        }
     });
     </script>
 </body>

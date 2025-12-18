@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Mortgage Hunter | Stephanie Hunter Smith | Ontario Mortgage Broker</title>
     <meta name="description" content="Expert mortgage broker serving Simcoe County and Ontario. First-time buyers, renewals, refinancing, self-employed, investment properties. Get the right mortgage for your situation.">
@@ -162,16 +163,19 @@
         .nav-dropdown-content {
             position: absolute;
             top: 100%;
-            left: 0;
+            right: 0;
             background: var(--color-white);
-            min-width: 260px;
-            padding: 12px 0;
+            min-width: 480px;
+            padding: 12px;
             border-radius: var(--radius-md);
             box-shadow: var(--shadow-lg);
             opacity: 0;
             visibility: hidden;
             transform: translateY(8px);
             transition: all var(--transition);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
         }
         
         .nav-dropdown:hover .nav-dropdown-content {
@@ -182,8 +186,8 @@
         
         .nav-dropdown-content a {
             display: block;
-            padding: 10px 20px;
-            border-radius: 0;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
             font-size: 0.9rem;
         }
         
@@ -622,6 +626,68 @@
         @media (max-width: 768px) {
             .nav {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-white);
+                flex-direction: column;
+                padding: 16px 24px;
+                border-top: 1px solid var(--color-cream-dark);
+                box-shadow: var(--shadow-md);
+                max-height: 70vh;
+                overflow-y: auto;
+            }
+            
+            .nav.nav-open {
+                display: flex;
+            }
+            
+            .nav a {
+                padding: 12px 0;
+                border-bottom: 1px solid var(--color-cream-dark);
+            }
+            
+            .nav .nav-dropdown > a::after {
+                content: ' ▾';
+            }
+            
+            .nav .nav-dropdown.dropdown-open > a::after {
+                content: ' ▴';
+            }
+            
+            .nav .nav-dropdown-content {
+                position: static;
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                overflow: hidden;
+                transform: none;
+                box-shadow: none;
+                min-width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                padding-left: 16px;
+                gap: 0;
+                transition: all 0.3s ease;
+            }
+            
+            .nav .nav-dropdown.dropdown-open .nav-dropdown-content {
+                opacity: 1;
+                visibility: visible;
+                max-height: 500px;
+                padding-top: 8px;
+            }
+            
+            .nav .nav-dropdown-content a {
+                padding: 10px 0;
+                font-size: 0.9rem;
+            }
+            
+            .nav .header-cta {
+                margin-top: 8px;
+                text-align: center;
             }
             
             .mobile-menu-btn {
@@ -798,7 +864,7 @@
             <div class="why-grid">
                 <div class="why-content">
                     <span class="section-label">Why Work With Me</span>
-                    <h2>Your Bank Works for the Bank. I Work for You.</h2>
+                    <h2>Your Banker Works for the Bank. I Work for You.</h2>
                     <p>When you walk into a bank, they show you their products. When you work with me, I shop your application across 30+ lenders—finding the one that fits your situation, not just the one that's convenient for them.</p>
                     
                     <ul class="why-list">
@@ -910,6 +976,15 @@
     document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
         document.querySelector(".nav").classList.toggle("nav-open");
         this.classList.toggle("active");
+    });
+    
+    // Mobile dropdown toggle
+    var dropdown = document.querySelector(".nav-dropdown > a");
+    dropdown.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("dropdown-open");
+        }
     });
     </script>
 </body>

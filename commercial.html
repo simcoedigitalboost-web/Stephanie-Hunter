@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commercial Mortgages Ontario | Multi-Unit, Mixed-Use & Business Properties | The Mortgage Hunter</title>
     <meta name="description" content="Commercial mortgage financing for 5+ unit buildings, mixed-use properties, and business real estate. DSCR-based lending, capitalization rates, and commercial terms explained.">
@@ -368,6 +369,13 @@
     document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
         document.querySelector(".nav").classList.toggle("nav-open");
         this.classList.toggle("active");
+    });
+    var dropdown = document.querySelector(".nav-dropdown > a");
+    dropdown.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("dropdown-open");
+        }
     });
     </script>
 </body>

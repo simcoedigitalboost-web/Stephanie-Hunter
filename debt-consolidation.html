@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Consolidation Ontario | Mortgage Refinancing to Pay Off Debt | The Mortgage Hunter</title>
     <meta name="description" content="Convert 20% credit card rates to sub-5% mortgage rates. Save $500-900/month through mortgage-based debt consolidation. Calculate if refinancing makes sense for your situation.">
@@ -63,9 +64,9 @@
         .nav a { padding: 10px 16px; color: var(--color-text); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-sm); transition: all var(--transition); }
         .nav a:hover { background: var(--color-cream); color: var(--color-burgundy); }
         .nav-dropdown { position: relative; }
-        .nav-dropdown-content { position: absolute; top: 100%; left: 0; background: var(--color-white); min-width: 260px; padding: 12px 0; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); }
+        .nav-dropdown-content { position: absolute; top: 100%; right: 0; background: var(--color-white); min-width: 480px; padding: 12px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
         .nav-dropdown:hover .nav-dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
-        .nav-dropdown-content a { display: block; padding: 10px 20px; border-radius: 0; font-size: 0.9rem; }
+        .nav-dropdown-content a { display: block; padding: 10px 16px; border-radius: var(--radius-sm); font-size: 0.9rem; }
         .nav-dropdown-content a:hover { background: var(--color-cream); }
         .header-cta { background: var(--color-burgundy); color: var(--color-white) !important; padding: 12px 24px !important; border-radius: var(--radius-md) !important; font-weight: 500; }
         .header-cta:hover { background: var(--color-burgundy-light); color: var(--color-white) !important; }
@@ -149,7 +150,7 @@
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
-            .nav { display: none; }
+            .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-white); flex-direction: column; padding: 16px 24px; border-top: 1px solid var(--color-cream-dark); box-shadow: var(--shadow-md); max-height: 70vh; overflow-y: auto; } .nav.nav-open { display: flex; } .nav a { padding: 12px 0; border-bottom: 1px solid var(--color-cream-dark); } .nav .nav-dropdown > a::after { content: " ▾"; } .nav .nav-dropdown.dropdown-open > a::after { content: " ▴"; } .nav .nav-dropdown-content { position: static; opacity: 0; visibility: hidden; max-height: 0; overflow: hidden; transform: none; box-shadow: none; min-width: 100%; display: flex; flex-direction: column; padding: 0; padding-left: 16px; gap: 0; transition: all 0.3s ease; } .nav .nav-dropdown.dropdown-open .nav-dropdown-content { opacity: 1; visibility: visible; max-height: 500px; padding-top: 8px; } .nav .nav-dropdown-content a { padding: 10px 0; font-size: 0.9rem; } .nav .header-cta { margin-top: 8px; text-align: center; }
             .mobile-menu-btn { display: block; }
             .main-content { padding: 32px 24px; }
             .sidebar { grid-template-columns: 1fr; }
@@ -405,6 +406,13 @@
     document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
         document.querySelector(".nav").classList.toggle("nav-open");
         this.classList.toggle("active");
+    });
+    var dropdown = document.querySelector(".nav-dropdown > a");
+    dropdown.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("dropdown-open");
+        }
     });
     </script>
 </body>
