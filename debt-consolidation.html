@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Consolidation Ontario | Mortgage Refinancing to Pay Off Debt | The Mortgage Hunter</title>
+    <meta name="description" content="Convert 20% credit card rates to sub-5% mortgage rates. Save $500-900/month through mortgage-based debt consolidation. Calculate if refinancing makes sense for your situation.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2a3a;
+            --color-navy-light: #2d4055;
+            --color-burgundy: #6b2d3a;
+            --color-burgundy-light: #8a3d4d;
+            --color-cream: #faf8f5;
+            --color-cream-dark: #f0ebe4;
+            --color-gold: #b8956b;
+            --color-gold-light: #d4b896;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-white: #ffffff;
+            --color-success: #2d6a4f;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 42, 58, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 42, 58, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 42, 58, 0.16);
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            --transition: 0.3s ease;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--color-text); background-color: var(--color-cream); }
+        
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--color-navy); }
+        h1 { font-size: clamp(2.25rem, 4.5vw, 3rem); }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-top: 48px; margin-bottom: 20px; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-top: 36px; margin-bottom: 16px; }
+        
+        p { margin-bottom: 20px; }
+        a { color: var(--color-burgundy); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--color-burgundy-light); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        .header { background: var(--color-white); border-bottom: 1px solid var(--color-cream-dark); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .the { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--color-text-light); }
+        .logo-text .main { font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.15em; color: var(--color-navy); text-transform: uppercase; }
+        .nav { display: flex; align-items: center; gap: 8px; }
+        .nav a { padding: 10px 16px; color: var(--color-text); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-sm); transition: all var(--transition); }
+        .nav a:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-content { position: absolute; top: 100%; left: 0; background: var(--color-white); min-width: 260px; padding: 12px 0; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); }
+        .nav-dropdown:hover .nav-dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-content a { display: block; padding: 10px 20px; border-radius: 0; font-size: 0.9rem; }
+        .nav-dropdown-content a:hover { background: var(--color-cream); }
+        .header-cta { background: var(--color-burgundy); color: var(--color-white) !important; padding: 12px 24px !important; border-radius: var(--radius-md) !important; font-weight: 500; }
+        .header-cta:hover { background: var(--color-burgundy-light); color: var(--color-white) !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--color-navy); margin: 6px 0; }
+        
+        .page-hero { background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%); padding: 60px 0 70px; position: relative; }
+        .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .page-hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .page-hero h1 { color: var(--color-white); margin-bottom: 16px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.85); font-size: 1.15rem; margin: 0; }
+        .breadcrumb { margin-bottom: 16px; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255, 255, 255, 0.6); }
+        .breadcrumb a:hover { color: var(--color-white); }
+        .breadcrumb span { color: rgba(255, 255, 255, 0.4); margin: 0 8px; }
+        
+        .content-section { padding: 60px 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: start; }
+        .main-content { background: var(--color-white); padding: 48px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+        .main-content > h2:first-child { margin-top: 0; }
+        
+        .sidebar { position: sticky; top: 100px; }
+        .sidebar-card { background: var(--color-white); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: 24px; }
+        .sidebar-card h4 { margin-top: 0; margin-bottom: 16px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--color-navy); }
+        .sidebar-card p { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 20px; }
+        .sidebar-card .btn { width: 100%; text-align: center; justify-content: center; }
+        
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-md); border: none; cursor: pointer; transition: all var(--transition); text-decoration: none; }
+        .btn-primary { background: var(--color-burgundy); color: var(--color-white); }
+        .btn-primary:hover { background: var(--color-burgundy-light); color: var(--color-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        
+        .phone-link { display: block; text-align: center; margin-top: 16px; font-size: 0.95rem; color: var(--color-text-light); }
+        .phone-link a { font-weight: 600; color: var(--color-burgundy); }
+        
+        .toc { background: var(--color-cream); padding: 24px; border-radius: var(--radius-md); }
+        .toc h4 { margin: 0 0 12px 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-light); }
+        .toc ul { list-style: none; margin: 0; padding: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { font-size: 0.9rem; color: var(--color-text); }
+        .toc a:hover { color: var(--color-burgundy); }
+        
+        .highlight-box { background: var(--color-cream); border-left: 4px solid var(--color-gold); padding: 24px 28px; margin: 32px 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .highlight-box p:last-child { margin-bottom: 0; }
+        .highlight-box.success { border-left-color: var(--color-success); background: #f0f7f4; }
+        .highlight-box.warning { border-left-color: #c9a227; background: #fdf8e8; }
+        
+        .stat-highlight { background: var(--color-navy); color: var(--color-white); padding: 32px; border-radius: var(--radius-lg); text-align: center; margin: 32px 0; }
+        .stat-highlight .number { font-family: var(--font-display); font-size: 3.5rem; font-weight: 700; color: var(--color-gold-light); line-height: 1; margin-bottom: 8px; }
+        .stat-highlight .label { font-size: 1.1rem; color: rgba(255,255,255,0.85); }
+        
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--color-cream-dark); }
+        th { background: var(--color-cream); font-weight: 600; color: var(--color-navy); }
+        tr:hover td { background: var(--color-cream); }
+        
+        ul, ol { margin: 20px 0; padding-left: 24px; }
+        li { margin-bottom: 10px; }
+        strong { color: var(--color-navy); }
+        
+        .cta-section { background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-light) 100%); padding: 60px 0; text-align: center; }
+        .cta-section h2 { color: var(--color-white); margin: 0 0 16px 0; }
+        .cta-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+        .cta-section .btn-primary { background: var(--color-white); color: var(--color-burgundy); }
+        .cta-section .btn-primary:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .cta-contact { margin-top: 20px; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .cta-contact a { color: var(--color-white); font-weight: 500; }
+        
+        .footer { background: var(--color-navy); color: rgba(255, 255, 255, 0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand p { margin-top: 16px; font-size: 0.95rem; line-height: 1.7; }
+        .footer h4 { color: var(--color-white); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; transition: color var(--transition); }
+        .footer ul a:hover { color: var(--color-gold-light); }
+        .footer-bottom { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        
+        @media (max-width: 1024px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .main-content { padding: 32px 24px; }
+            .sidebar { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><div class="logo-text"><span class="the">The</span><span class="main">Mortgage Hunter</span></div></a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Homebuyers</a>
+                        <a href="renewals-switches.html">Renewals &amp; Switches</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="self-employed.html">Self-Employed Mortgages</a>
+                        <a href="new-to-canada.html">New to Canada</a>
+                        <a href="investment-properties.html">Investment Properties</a>
+                        <a href="commercial.html">Commercial Lending</a>
+                        <a href="vacation-homes.html">Vacation &amp; Second Homes</a>
+                        <a href="renovation-mortgages.html">Renovation Mortgages</a>
+                        <a href="debt-consolidation.html">Debt Consolidation</a>
+                        <a href="credit-repair.html">Credit Repair</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="header-cta">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="#">Services</a><span>/</span>Debt Consolidation</div>
+                <h1>Mortgage-Based Debt Consolidation</h1>
+                <p>Canadians owe $1.74 for every dollar of disposable income—the highest debt-to-income ratio in the G7. Your home equity could be the key to getting out from under high-interest debt.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <article class="main-content">
+                    
+                    <h2 id="overview">The Math That Makes This Work</h2>
+                    
+                    <p>The interest rate gap between consumer debt and mortgage rates represents one of the biggest financial arbitrage opportunities available to homeowners:</p>
+                    
+                    <table>
+                        <thead><tr><th>Debt Type</th><th>Typical Rate</th><th>vs. Mortgage (~4.5%)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Credit cards</td><td>19.99% - 23.99%</td><td><strong>15-19% savings</strong></td></tr>
+                            <tr><td>Store credit cards</td><td>24.99% - 29.99%</td><td><strong>20-25% savings</strong></td></tr>
+                            <tr><td>Personal loans (unsecured)</td><td>9.75% - 20%</td><td><strong>5-15% savings</strong></td></tr>
+                            <tr><td>Personal line of credit</td><td>9.41% average</td><td><strong>5% savings</strong></td></tr>
+                            <tr><td>Car loans</td><td>6.68% average</td><td><strong>2% savings</strong></td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>When you refinance to consolidate debt, you're replacing high-interest debt with low-interest mortgage debt—secured by your home. The rate difference is dramatic, but the strategy only works when executed correctly.</p>
+                    
+                    <h2 id="real-savings">Real Payment Savings Example</h2>
+                    
+                    <p><strong>Scenario: $50,000 in mixed high-interest debt</strong></p>
+                    
+                    <p><em>Before consolidation:</em></p>
+                    <ul>
+                        <li>Credit cards ($25,000 at 20%): $625/month minimum</li>
+                        <li>Car loan ($15,000 at 7%): $297/month</li>
+                        <li>Personal line of credit ($10,000 at 9.5%): $200/month</li>
+                        <li><strong>Total: $1,122/month</strong></li>
+                    </ul>
+                    
+                    <p><em>After mortgage consolidation at 4.5%:</em></p>
+                    <ul>
+                        <li>Added to mortgage (25-year amortization): <strong>$278/month</strong></li>
+                        <li><strong>Monthly savings: $844</strong></li>
+                        <li><strong>Annual cash flow improvement: $10,128</strong></li>
+                    </ul>
+                    
+                    <div class="stat-highlight">
+                        <div class="number">$844</div>
+                        <div class="label">Monthly savings on $50K consolidated debt</div>
+                    </div>
+                    
+                    <h2 id="the-catch">The Critical Catch: Amortization Period</h2>
+                    
+                    <p>Here's what nobody tells you: <strong>extending your repayment period can eliminate your savings entirely</strong>—or even cost you more.</p>
+                    
+                    <p>Consider $30,000 consolidated at 4.5%:</p>
+                    <ul>
+                        <li>Paid over 5 years: $3,960 total interest</li>
+                        <li>Paid over 25 years: <strong>$22,500 total interest</strong></li>
+                    </ul>
+                    
+                    <p>If you could pay off that same $30,000 at 20% over 3 years ($1,000/month aggressive payments), your total interest would be approximately $7,500—<strong>less than the 25-year mortgage scenario.</strong></p>
+                    
+                    <div class="highlight-box warning">
+                        <p><strong>The rule:</strong> Consolidation only saves money if you match or shorten your original payoff timeline. Taking $844/month in "savings" and spending it elsewhere while extending your debt over 25 years will cost you more in the long run.</p>
+                    </div>
+                    
+                    <h2 id="how-it-works">How Mortgage-Based Consolidation Works</h2>
+                    
+                    <h3>Option 1: Refinancing</h3>
+                    
+                    <p>Replace your existing mortgage with a new, larger mortgage. The difference pays off your high-interest debts. Maximum loan-to-value: <strong>80%</strong> (you must retain 20% equity).</p>
+                    
+                    <p><strong>Example:</strong> Home worth $600,000 with $300,000 mortgage. Maximum new mortgage: $480,000. Available equity for consolidation: $180,000.</p>
+                    
+                    <p>Costs include prepayment penalties (if breaking mid-term), appraisal, legal fees. Stress test qualification required.</p>
+                    
+                    <h3>Option 2: HELOC (Home Equity Line of Credit)</h3>
+                    
+                    <p>Access a revolving credit line secured by your home. Maximum <strong>65% LTV</strong> for standalone HELOC, or <strong>80% combined</strong> with mortgage. Current rates: approximately <strong>4.95-5.45%</strong> (prime + 0.5% to prime + 1%).</p>
+                    
+                    <p>Advantage: Doesn't disturb your existing mortgage (preserve that low rate). Disadvantage: Variable rate, revolving credit can lead to re-accumulating debt.</p>
+                    
+                    <h3>Option 3: Second Mortgage</h3>
+                    
+                    <p>Keep your first mortgage intact, add a second. Higher rates (6-15% depending on lender type) but preserves first mortgage terms. Useful when your existing rate is too good to break.</p>
+                    
+                    <h2 id="when-it-works">When Consolidation Makes Financial Sense</h2>
+                    
+                    <table>
+                        <thead><tr><th>Debt Amount</th><th>Worth It?</th><th>Why</th></tr></thead>
+                        <tbody>
+                            <tr><td>Under $10,000</td><td>Usually no</td><td>Fees consume savings</td></tr>
+                            <tr><td>$15,000 - $25,000</td><td>Maybe</td><td>Worth it if total fees under $2,000</td></tr>
+                            <tr><td>$25,000 - $50,000</td><td>Generally yes</td><td>Strong case in most situations</td></tr>
+                            <tr><td>Over $50,000</td><td>Almost always</td><td>Savings justify costs</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>Breakeven Analysis</h3>
+                    
+                    <p>For consolidation to make sense, savings must exceed costs within a reasonable timeframe:</p>
+                    
+                    <p><strong>Example:</strong> $25,000 debt with $2,000 in refinancing costs</p>
+                    <ul>
+                        <li>Current monthly interest (20%): $417</li>
+                        <li>New monthly interest (4.5%): $94</li>
+                        <li>Monthly savings: $323</li>
+                        <li><strong>Breakeven: 6.2 months</strong></li>
+                    </ul>
+                    
+                    <h2 id="when-not">When Consolidation Is the Wrong Move</h2>
+                    
+                    <ul>
+                        <li><strong>Spending habits remain unaddressed:</strong> 20%+ of debt consolidators re-accumulate debt without behavior change</li>
+                        <li><strong>Insufficient equity:</strong> Less than 20% home equity limits options</li>
+                        <li><strong>Job instability:</strong> Your home becomes collateral—job loss could mean losing the home</li>
+                        <li><strong>Cannot pass stress test:</strong> Alternative lenders' higher rates may eliminate savings</li>
+                        <li><strong>Debt exceeds available equity:</strong> Won't solve the full problem</li>
+                        <li><strong>Planning to sell soon:</strong> Breaking costs may exceed benefits</li>
+                    </ul>
+                    
+                    <h2 id="for-buyers">For Buyers: How Debt Affects Your Mortgage</h2>
+                    
+                    <p>If you're trying to buy a home while carrying debt, understanding how lenders calculate your debt load is critical.</p>
+                    
+                    <h3>The 3% Rule</h3>
+                    
+                    <p>Lenders calculate credit card and line of credit payments at <strong>3% of the outstanding balance</strong>—regardless of your actual minimum payment.</p>
+                    
+                    <ul>
+                        <li>$15,000 credit card balance = <strong>$450/month</strong> in lender calculations</li>
+                        <li>$10,000 line of credit = <strong>$300/month</strong></li>
+                    </ul>
+                    
+                    <h3>The Multiplier Effect</h3>
+                    
+                    <p>Every <strong>$100 in monthly debt payments reduces mortgage qualification by approximately $10,000-$15,000</strong>.</p>
+                    
+                    <table>
+                        <thead><tr><th>Monthly Debt Reduced</th><th>Additional Mortgage Qualification</th></tr></thead>
+                        <tbody>
+                            <tr><td>$200</td><td>$20,000 - $30,000</td></tr>
+                            <tr><td>$500</td><td>$50,000 - $100,000</td></tr>
+                            <tr><td>$800</td><td>$80,000 - $120,000</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Practical example:</strong> A couple earning $100,000 combined with $500/month in existing debt payments qualifies for approximately $350,000-$400,000. Eliminate that debt, and qualification jumps to $450,000-$500,000—a potential <strong>$100,000+ increase in purchasing power</strong>.</p>
+                    
+                    <h2 id="next-steps">Your Next Steps</h2>
+                    
+                    <ol>
+                        <li><strong>Calculate your total high-interest debt</strong>—know exactly what you're dealing with</li>
+                        <li><strong>Estimate your home equity</strong>—recent comparable sales can give you a rough idea</li>
+                        <li><strong>Understand your current mortgage penalty</strong>—this determines whether mid-term refinancing makes sense</li>
+                        <li><strong>Talk to a broker</strong>—consolidation math is specific to your situation</li>
+                    </ol>
+                    
+                    <p>Debt consolidation can be transformative when done right, or an expensive mistake when done wrong. The difference is in the details—your penalty structure, your equity position, your ability to maintain discipline after consolidation. A conversation about your specific numbers costs nothing and gives you clarity.</p>
+                    
+                </article>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h4>Drowning in High-Interest Debt?</h4>
+                        <p>Let's calculate whether consolidation makes sense for your specific situation—and what it would actually save you.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Calculation</a>
+                        <p class="phone-link">Or call <a href="tel:7053236779">705.323.6779</a></p>
+                    </div>
+                    
+                    <div class="sidebar-card toc">
+                        <h4>On This Page</h4>
+                        <ul>
+                            <li><a href="#overview">The Math</a></li>
+                            <li><a href="#real-savings">Real Savings Example</a></li>
+                            <li><a href="#the-catch">The Critical Catch</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#when-it-works">When It Makes Sense</a></li>
+                            <li><a href="#when-not">When It Doesn't</a></li>
+                            <li><a href="#for-buyers">For Buyers</a></li>
+                            <li><a href="#next-steps">Next Steps</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Run the Numbers?</h2>
+            <p>Debt consolidation only makes sense when the math works. Let's find out if it works for you.</p>
+            <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+            <p class="cta-contact">Or call directly: <a href="tel:7053236779">705.323.6779</a></p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><div class="logo-text"><span class="the" style="color: rgba(255,255,255,0.5);">The</span><span class="main" style="color: #fff;">Mortgage Hunter</span></div><p>Stephanie Hunter Smith<br>Licensed Mortgage Professional<br>Serving Simcoe County &amp; Ontario</p></div>
+                <div><h4>Buying</h4><ul><li><a href="first-time-buyers.html">First-Time Buyers</a></li><li><a href="new-to-canada.html">New to Canada</a></li><li><a href="credit-repair.html">Credit Repair</a></li></ul></div>
+                <div><h4>Homeowners</h4><ul><li><a href="renewals-switches.html">Renewals &amp; Switches</a></li><li><a href="refinancing.html">Refinancing</a></li><li><a href="debt-consolidation.html">Debt Consolidation</a></li><li><a href="renovation-mortgages.html">Renovation Mortgages</a></li></ul></div>
+                <div><h4>Investors</h4><ul><li><a href="investment-properties.html">Investment Properties</a></li><li><a href="commercial.html">Commercial Lending</a></li><li><a href="vacation-homes.html">Vacation Homes</a></li><li><a href="self-employed.html">Self-Employed</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 The Mortgage Hunter. All rights reserved.</p><p><a href="tel:7053236779">705.323.6779</a></p></div>
+        </div>
+    </footer>
+    <script>
+    document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("nav-open");
+        this.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>

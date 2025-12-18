@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First-Time Homebuyers Ontario | Programs, Incentives & Mortgage Guide | The Mortgage Hunter</title>
+    <meta name="description" content="Complete guide to first-time homebuyer programs in Ontario. FHSA ($40K), RRSP HBP ($60K), Simcoe County $50K forgivable loan, land transfer tax rebates. Expert mortgage broker guidance.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2a3a;
+            --color-navy-light: #2d4055;
+            --color-burgundy: #6b2d3a;
+            --color-burgundy-light: #8a3d4d;
+            --color-cream: #faf8f5;
+            --color-cream-dark: #f0ebe4;
+            --color-gold: #b8956b;
+            --color-gold-light: #d4b896;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-white: #ffffff;
+            --color-success: #2d6a4f;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 42, 58, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 42, 58, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 42, 58, 0.16);
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            --transition: 0.3s ease;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-cream);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.25;
+            color: var(--color-navy);
+        }
+        
+        h1 { font-size: clamp(2.25rem, 4.5vw, 3rem); }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-top: 48px; margin-bottom: 20px; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-top: 36px; margin-bottom: 16px; }
+        h4 { font-size: 1.125rem; margin-top: 28px; margin-bottom: 12px; }
+        
+        p { margin-bottom: 20px; }
+        
+        a { color: var(--color-burgundy); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--color-burgundy-light); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Header - same as homepage */
+        .header {
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-cream-dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .the { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--color-text-light); }
+        .logo-text .main { font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.15em; color: var(--color-navy); text-transform: uppercase; }
+        
+        .nav { display: flex; align-items: center; gap: 8px; }
+        .nav a { padding: 10px 16px; color: var(--color-text); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-sm); transition: all var(--transition); }
+        .nav a:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-content { position: absolute; top: 100%; left: 0; background: var(--color-white); min-width: 260px; padding: 12px 0; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); }
+        .nav-dropdown:hover .nav-dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-content a { display: block; padding: 10px 20px; border-radius: 0; font-size: 0.9rem; }
+        .nav-dropdown-content a:hover { background: var(--color-cream); }
+        
+        .header-cta { background: var(--color-burgundy); color: var(--color-white) !important; padding: 12px 24px !important; border-radius: var(--radius-md) !important; font-weight: 500; }
+        .header-cta:hover { background: var(--color-burgundy-light); color: var(--color-white) !important; }
+        
+        .mobile-menu-btn { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--color-navy); margin: 6px 0; }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 60px 0 70px;
+            position: relative;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .page-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .page-hero h1 { color: var(--color-white); margin-bottom: 16px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.85); font-size: 1.15rem; margin: 0; }
+        
+        .breadcrumb {
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a { color: rgba(255, 255, 255, 0.6); }
+        .breadcrumb a:hover { color: var(--color-white); }
+        .breadcrumb span { color: rgba(255, 255, 255, 0.4); margin: 0 8px; }
+        
+        /* Content Layout */
+        .content-section {
+            padding: 60px 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .main-content {
+            background: var(--color-white);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .main-content > h2:first-child { margin-top: 0; }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .sidebar-card {
+            background: var(--color-white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 24px;
+        }
+        
+        .sidebar-card h4 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-navy);
+        }
+        
+        .sidebar-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-bottom: 20px;
+        }
+        
+        .sidebar-card .btn {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--color-burgundy);
+            color: var(--color-white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-burgundy-light);
+            color: var(--color-white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .phone-link {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        
+        .phone-link a {
+            font-weight: 600;
+            color: var(--color-burgundy);
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: var(--color-cream);
+            padding: 24px;
+            border-radius: var(--radius-md);
+        }
+        
+        .toc h4 {
+            margin: 0 0 12px 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-light);
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+        
+        .toc a {
+            font-size: 0.9rem;
+            color: var(--color-text);
+        }
+        
+        .toc a:hover {
+            color: var(--color-burgundy);
+        }
+        
+        /* Content Elements */
+        .highlight-box {
+            background: var(--color-cream);
+            border-left: 4px solid var(--color-gold);
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+        
+        .highlight-box p:last-child { margin-bottom: 0; }
+        
+        .highlight-box.success {
+            border-left-color: var(--color-success);
+            background: #f0f7f4;
+        }
+        
+        .program-card {
+            background: var(--color-cream);
+            padding: 28px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+        }
+        
+        .program-card h4 {
+            margin-top: 0;
+            color: var(--color-burgundy);
+        }
+        
+        .program-card .amount {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: 12px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.95rem;
+        }
+        
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--color-cream-dark);
+        }
+        
+        th {
+            background: var(--color-cream);
+            font-weight: 600;
+            color: var(--color-navy);
+        }
+        
+        tr:hover td {
+            background: var(--color-cream);
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 24px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        strong {
+            color: var(--color-navy);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-light) 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 { color: var(--color-white); margin: 0 0 16px 0; }
+        .cta-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+        .cta-section .btn-primary { background: var(--color-white); color: var(--color-burgundy); }
+        .cta-section .btn-primary:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .cta-contact { margin-top: 20px; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .cta-contact a { color: var(--color-white); font-weight: 500; }
+        
+        /* Footer */
+        .footer {
+            background: var(--color-navy);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand p { margin-top: 16px; font-size: 0.95rem; line-height: 1.7; }
+        .footer h4 { color: var(--color-white); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; transition: color var(--transition); }
+        .footer ul a:hover { color: var(--color-gold-light); }
+        .footer-bottom { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .main-content { padding: 32px 24px; }
+            .sidebar { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <span class="the">The</span>
+                    <span class="main">Mortgage Hunter</span>
+                </div>
+            </a>
+            
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Homebuyers</a>
+                        <a href="renewals-switches.html">Renewals &amp; Switches</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="self-employed.html">Self-Employed Mortgages</a>
+                        <a href="new-to-canada.html">New to Canada</a>
+                        <a href="investment-properties.html">Investment Properties</a>
+                        <a href="commercial.html">Commercial Lending</a>
+                        <a href="vacation-homes.html">Vacation &amp; Second Homes</a>
+                        <a href="renovation-mortgages.html">Renovation Mortgages</a>
+                        <a href="debt-consolidation.html">Debt Consolidation</a>
+                        <a href="credit-repair.html">Credit Repair</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="header-cta">Contact</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <a href="#">Services</a>
+                    <span>/</span>
+                    First-Time Homebuyers
+                </div>
+                <h1>First-Time Homebuyer Programs in Ontario</h1>
+                <p>A complete guide to the grants, rebates, and incentives that can put $100,000+ toward your first home—and how to actually qualify for them.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <article class="main-content">
+                    
+                    <h2 id="overview">Most First-Time Buyers Leave Money on the Table</h2>
+                    
+                    <p>Here's what usually happens: you walk into a bank, they run some numbers, and they offer you a mortgage. You assume that's the best you can do. You sign. Done.</p>
+                    
+                    <p>But here's what you don't see: there are grants, rebates, incentives, and programs specifically designed to help first-time buyers—and most people never hear about them. Between federal programs, Ontario-specific rebates, and local assistance, you could be looking at <strong>$100,000 or more in combined support</strong>.</p>
+                    
+                    <p>That's not an exaggeration. That's what happens when you know where to look—and when you work with someone whose job is to find every advantage for your specific situation.</p>
+                    
+                    <div class="highlight-box success">
+                        <p><strong>For a $500,000 new build in Simcoe County, a first-time buyer could potentially access:</strong> $40,000 FHSA + $60,000 RRSP HBP + $50,000 Simcoe County loan + $4,000 land transfer rebate + $25,000+ GST rebate + $1,500 tax credit = <strong>over $180,000 in combined support</strong>.</p>
+                    </div>
+                    
+                    <h2 id="federal-programs">Federal Programs: The Foundation of Your Down Payment</h2>
+                    
+                    <h3>First Home Savings Account (FHSA)</h3>
+                    
+                    <div class="program-card">
+                        <div class="amount">Up to $40,000</div>
+                        <h4>Tax-Free Down Payment Savings</h4>
+                        <p>The FHSA is the best savings vehicle for first-time buyers—period. You get the tax deduction of an RRSP (contributions reduce your taxable income) <em>and</em> the tax-free withdrawals of a TFSA (no tax when you use it for your home). No other account offers both.</p>
+                        <ul>
+                            <li><strong>Annual contribution limit:</strong> $8,000</li>
+                            <li><strong>Lifetime maximum:</strong> $40,000</li>
+                            <li><strong>No repayment required</strong> (unlike the RRSP Home Buyers' Plan)</li>
+                            <li><strong>Must use within 15 years</strong> or transfer to RRSP</li>
+                            <li><strong>Available to:</strong> Canadian residents 18+ who haven't owned a home in the past 4 years</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>RRSP Home Buyers' Plan (HBP)</h3>
+                    
+                    <div class="program-card">
+                        <div class="amount">Up to $60,000</div>
+                        <h4>Tax-Free RRSP Withdrawal ($120,000 for Couples)</h4>
+                        <p>Withdraw from your RRSP tax-free to buy your first home. The limit increased from $35,000 to $60,000 in April 2024—a significant boost for buyers in expensive markets.</p>
+                        <ul>
+                            <li><strong>Individual limit:</strong> $60,000</li>
+                            <li><strong>Couples buying together:</strong> $120,000 combined</li>
+                            <li><strong>Repayment:</strong> Must repay over 15 years (starts 2-5 years after withdrawal)</li>
+                            <li><strong>Requirement:</strong> Funds must be in RRSP for at least 90 days before withdrawal</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>First-Time Home Buyer Tax Credit</h3>
+                    
+                    <div class="program-card">
+                        <div class="amount">$1,500</div>
+                        <h4>Non-Refundable Tax Credit</h4>
+                        <p>A straightforward $1,500 back on your taxes in the year you purchase. Claim it on your tax return—no application required.</p>
+                    </div>
+                    
+                    <h3>30-Year Amortization for First-Time Buyers</h3>
+                    
+                    <p>As of December 2024, first-time buyers (and anyone buying new construction) can now access 30-year amortizations on insured mortgages. Previously, only 25-year terms were available for high-ratio mortgages. This extends your payments over a longer period, reducing monthly costs by approximately <strong>$300-600 per month</strong> on a typical mortgage—though you'll pay more interest over the life of the loan.</p>
+                    
+                    <h3>Increased Insured Mortgage Cap</h3>
+                    
+                    <p>Also effective December 2024, the insured mortgage limit increased from $1 million to <strong>$1.5 million</strong>. This means buyers in expensive markets can now access insured mortgages (with as little as 5% down) on properties up to $1.5M—previously, anything over $1M required 20% down.</p>
+                    
+                    <h2 id="ontario-programs">Ontario-Specific Programs</h2>
+                    
+                    <h3>Ontario Land Transfer Tax Rebate</h3>
+                    
+                    <div class="program-card">
+                        <div class="amount">Up to $4,000</div>
+                        <h4>Provincial LTT Rebate for First-Time Buyers</h4>
+                        <p>First-time buyers in Ontario receive a rebate of up to $4,000 on the provincial land transfer tax. This covers the full LTT on homes up to $368,000, with partial rebates on higher-priced homes.</p>
+                    </div>
+                    
+                    <h3>Toronto Land Transfer Tax Rebate (Toronto Only)</h3>
+                    
+                    <div class="program-card">
+                        <div class="amount">Up to $4,475</div>
+                        <h4>Municipal LTT Rebate for First-Time Buyers in Toronto</h4>
+                        <p>Toronto has its own municipal land transfer tax on top of the provincial one. First-time buyers get an additional rebate of up to $4,475, for a <strong>combined maximum of $8,475</strong> in LTT rebates when buying in Toronto.</p>
+                    </div>
+                    
+                    <h3>New GST/HST Rebates on New Builds</h3>
+                    
+                    <p>Recent and proposed changes have dramatically expanded GST/HST relief for new construction purchases:</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rebate</th>
+                                <th>Maximum</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Federal GST Rebate (proposed)</td>
+                                <td>Up to $50,000</td>
+                                <td>100% GST rebate on new homes up to $1M</td>
+                            </tr>
+                            <tr>
+                                <td>Ontario HST Rebate (proposed)</td>
+                                <td>Up to $80,000</td>
+                                <td>100% provincial HST on new homes up to $1M</td>
+                            </tr>
+                            <tr>
+                                <td>Existing Ontario HST Rebate</td>
+                                <td>Up to $24,000</td>
+                                <td>75% of provincial HST, available now</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>Note: Some proposed rebates are pending legislation. I stay current on what's actually available versus what's been announced.</p>
+                    
+                    <h2 id="simcoe-county">Simcoe County Down Payment Assistance</h2>
+                    
+                    <div class="program-card">
+                        <div class="amount">Up to $50,000</div>
+                        <h4>10% Forgivable Loan for Local Residents</h4>
+                        <p>This is the program most people don't know about. Simcoe County offers a <strong>20-year forgivable loan</strong> covering up to 10% of your purchase price—if you stay in the home for 20 years, you never repay a cent.</p>
+                        <ul>
+                            <li><strong>Maximum:</strong> $50,000 (10% of purchase price)</li>
+                            <li><strong>Purchase price limit:</strong> $712,300</li>
+                            <li><strong>Household income limit:</strong> $121,500</li>
+                            <li><strong>Requirements:</strong> Must be current Simcoe County resident (including Barrie & Orillia), currently renting</li>
+                            <li><strong>Waitlist:</strong> 6-12 months typical—apply early</li>
+                            <li><strong>Contact:</strong> iah@simcoe.ca or 705-725-7215 x1119</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Important:</strong> The Simcoe County program has income and price limits that exclude some buyers. But if you qualify, it's essentially free money toward your down payment. I can help you determine eligibility and coordinate with other programs.</p>
+                    </div>
+                    
+                    <h2 id="qualification">Mortgage Qualification: What Lenders Actually Look At</h2>
+                    
+                    <h3>The Stress Test</h3>
+                    
+                    <p>Every mortgage applicant must qualify at the higher of their actual contract rate plus 2%, or <strong>5.25%</strong>—whichever is greater. This "stress test" ensures you can afford payments if rates rise. With current rates around 4-5%, most buyers qualify at 6-7%.</p>
+                    
+                    <p>This means you need more income to qualify than you might expect based on actual payments. A broker can calculate your exact qualification amount before you start shopping.</p>
+                    
+                    <h3>Debt Service Ratios</h3>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ratio</th>
+                                <th>Maximum</th>
+                                <th>What It Measures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GDS (Gross Debt Service)</td>
+                                <td>39%</td>
+                                <td>Housing costs ÷ gross income</td>
+                            </tr>
+                            <tr>
+                                <td>TDS (Total Debt Service)</td>
+                                <td>44%</td>
+                                <td>All debt payments ÷ gross income</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>The TDS calculation uses the <strong>3% rule</strong> for credit cards and lines of credit—lenders assume 3% of the balance as your monthly payment, regardless of your actual minimum. A $15,000 credit card balance counts as $450/month in your qualification, even if your minimum payment is much lower.</p>
+                    
+                    <h3>Credit Score Requirements</h3>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Credit Score</th>
+                                <th>Lender Options</th>
+                                <th>Down Payment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>680+</td>
+                                <td>A-lenders (Big 5 banks, best rates)</td>
+                                <td>5%+</td>
+                            </tr>
+                            <tr>
+                                <td>600-679</td>
+                                <td>CMHC-insured mortgages</td>
+                                <td>5%+</td>
+                            </tr>
+                            <tr>
+                                <td>500-650</td>
+                                <td>B-lenders</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>Below 500</td>
+                                <td>Private lenders</td>
+                                <td>25-35%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>Not sure where you stand? I can pull a credit check as part of our initial conversation and map out your options.</p>
+                    
+                    <h2 id="down-payment">Down Payment Requirements</h2>
+                    
+                    <p>The minimum down payment in Canada depends on purchase price:</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Purchase Price</th>
+                                <th>Minimum Down Payment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Up to $500,000</td>
+                                <td>5%</td>
+                            </tr>
+                            <tr>
+                                <td>$500,001 - $1,500,000</td>
+                                <td>5% on first $500K + 10% on remainder</td>
+                            </tr>
+                            <tr>
+                                <td>Over $1,500,000</td>
+                                <td>20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Example:</strong> For a $700,000 home, minimum down payment = (5% × $500,000) + (10% × $200,000) = $25,000 + $20,000 = <strong>$45,000</strong></p>
+                    
+                    <h3>Acceptable Down Payment Sources</h3>
+                    
+                    <ul>
+                        <li>Personal savings</li>
+                        <li>FHSA withdrawals</li>
+                        <li>RRSP Home Buyers' Plan withdrawals</li>
+                        <li>Gifted funds from immediate family (gift letter required)</li>
+                        <li>Proceeds from selling existing property</li>
+                        <li>Simcoe County down payment assistance program</li>
+                    </ul>
+                    
+                    <h2 id="common-myths">Common Myths That Hold First-Time Buyers Back</h2>
+                    
+                    <p><strong>"I need 20% down to buy a home."</strong><br>
+                    False. You can buy with as little as 5% down on homes up to $500,000, and the new $1.5M insured cap means even expensive properties are accessible with less than 20%.</p>
+                    
+                    <p><strong>"My credit isn't good enough."</strong><br>
+                    The average Canadian credit score is 762. You need 600 for insured mortgages, and B-lenders work with scores in the 500s. Poor credit doesn't mean no mortgage—it means different options.</p>
+                    
+                    <p><strong>"Student debt disqualifies me."</strong><br>
+                    Student loans affect your TDS ratio, but they don't disqualify you. Strategic debt paydown before applying can significantly increase your purchasing power.</p>
+                    
+                    <p><strong>"Renting is cheaper than owning."</strong><br>
+                    With current rent prices in Simcoe County, monthly mortgage payments on a starter home are often comparable to—or lower than—rent, while building equity.</p>
+                    
+                    <p><strong>"I should go to my bank."</strong><br>
+                    Your bank shows you their products. A broker shows you 30+ lenders' products—including options with better rates, better terms, and qualification flexibility your bank doesn't offer.</p>
+                    
+                    <h2 id="next-steps">Your Next Steps</h2>
+                    
+                    <ol>
+                        <li><strong>Open an FHSA immediately</strong> if you haven't already—you can contribute $8,000 this year and carry forward unused room.</li>
+                        <li><strong>Check your credit score</strong> through Borrowell (free Equifax) or Credit Karma (free TransUnion).</li>
+                        <li><strong>Calculate your debt service ratios</strong> to understand your approximate budget.</li>
+                        <li><strong>Talk to a broker</strong>—not to commit, but to understand your actual options and timeline.</li>
+                    </ol>
+                    
+                    <p>Every situation is different. Some buyers are ready now but don't realize it. Others think they're ready but need 6-12 months of preparation. A conversation costs nothing and gives you clarity either way.</p>
+                    
+                </article>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h4>Ready to Get Started?</h4>
+                        <p>Let's talk about your situation—which programs you qualify for, what you can afford, and the best path forward.</p>
+                        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                        <p class="phone-link">Or call <a href="tel:7053236779">705.323.6779</a></p>
+                    </div>
+                    
+                    <div class="sidebar-card toc">
+                        <h4>On This Page</h4>
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#federal-programs">Federal Programs</a></li>
+                            <li><a href="#ontario-programs">Ontario Programs</a></li>
+                            <li><a href="#simcoe-county">Simcoe County Assistance</a></li>
+                            <li><a href="#qualification">Mortgage Qualification</a></li>
+                            <li><a href="#down-payment">Down Payment</a></li>
+                            <li><a href="#common-myths">Common Myths</a></li>
+                            <li><a href="#next-steps">Next Steps</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Questions About Buying Your First Home?</h2>
+            <p>Every first-time buyer's situation is different. Let's figure out what programs you qualify for and what you can actually afford.</p>
+            <a href="contact.html" class="btn btn-primary">Book a Consultation</a>
+            <p class="cta-contact">Or call directly: <a href="tel:7053236779">705.323.6779</a></p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">
+                        <span class="the" style="color: rgba(255,255,255,0.5);">The</span>
+                        <span class="main" style="color: #fff;">Mortgage Hunter</span>
+                    </div>
+                    <p>Stephanie Hunter Smith<br>Licensed Mortgage Professional<br>Serving Simcoe County &amp; Ontario</p>
+                </div>
+                
+                <div>
+                    <h4>Buying</h4>
+                    <ul>
+                        <li><a href="first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="new-to-canada.html">New to Canada</a></li>
+                        <li><a href="credit-repair.html">Credit Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Homeowners</h4>
+                    <ul>
+                        <li><a href="renewals-switches.html">Renewals &amp; Switches</a></li>
+                        <li><a href="refinancing.html">Refinancing</a></li>
+                        <li><a href="debt-consolidation.html">Debt Consolidation</a></li>
+                        <li><a href="renovation-mortgages.html">Renovation Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Investors</h4>
+                    <ul>
+                        <li><a href="investment-properties.html">Investment Properties</a></li>
+                        <li><a href="commercial.html">Commercial Lending</a></li>
+                        <li><a href="vacation-homes.html">Vacation Homes</a></li>
+                        <li><a href="self-employed.html">Self-Employed</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Mortgage Hunter. All rights reserved.</p>
+                <p><a href="tel:7053236779">705.323.6779</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("nav-open");
+        this.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>

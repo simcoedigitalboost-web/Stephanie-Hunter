@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Repair & Rebuilding Ontario | Path to Mortgage Approval | The Mortgage Hunter</title>
+    <meta name="description" content="Rebuild damaged credit to qualify for a mortgage. From poor credit (below 560) to mortgage-ready (680+) in 12-24 months. B-lender and private options while you rebuild.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2a3a;
+            --color-navy-light: #2d4055;
+            --color-burgundy: #6b2d3a;
+            --color-burgundy-light: #8a3d4d;
+            --color-cream: #faf8f5;
+            --color-cream-dark: #f0ebe4;
+            --color-gold: #b8956b;
+            --color-gold-light: #d4b896;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-white: #ffffff;
+            --color-success: #2d6a4f;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 42, 58, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 42, 58, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 42, 58, 0.16);
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            --transition: 0.3s ease;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--color-text); background-color: var(--color-cream); }
+        
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--color-navy); }
+        h1 { font-size: clamp(2.25rem, 4.5vw, 3rem); }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-top: 48px; margin-bottom: 20px; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-top: 36px; margin-bottom: 16px; }
+        
+        p { margin-bottom: 20px; }
+        a { color: var(--color-burgundy); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--color-burgundy-light); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        .header { background: var(--color-white); border-bottom: 1px solid var(--color-cream-dark); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .the { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--color-text-light); }
+        .logo-text .main { font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.15em; color: var(--color-navy); text-transform: uppercase; }
+        .nav { display: flex; align-items: center; gap: 8px; }
+        .nav a { padding: 10px 16px; color: var(--color-text); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-sm); transition: all var(--transition); }
+        .nav a:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-content { position: absolute; top: 100%; left: 0; background: var(--color-white); min-width: 260px; padding: 12px 0; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); }
+        .nav-dropdown:hover .nav-dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-content a { display: block; padding: 10px 20px; border-radius: 0; font-size: 0.9rem; }
+        .nav-dropdown-content a:hover { background: var(--color-cream); }
+        .header-cta { background: var(--color-burgundy); color: var(--color-white) !important; padding: 12px 24px !important; border-radius: var(--radius-md) !important; font-weight: 500; }
+        .header-cta:hover { background: var(--color-burgundy-light); color: var(--color-white) !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--color-navy); margin: 6px 0; }
+        
+        .page-hero { background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%); padding: 60px 0 70px; position: relative; }
+        .page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .page-hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .page-hero h1 { color: var(--color-white); margin-bottom: 16px; }
+        .page-hero p { color: rgba(255, 255, 255, 0.85); font-size: 1.15rem; margin: 0; }
+        .breadcrumb { margin-bottom: 16px; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255, 255, 255, 0.6); }
+        .breadcrumb a:hover { color: var(--color-white); }
+        .breadcrumb span { color: rgba(255, 255, 255, 0.4); margin: 0 8px; }
+        
+        .content-section { padding: 60px 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: start; }
+        .main-content { background: var(--color-white); padding: 48px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+        .main-content > h2:first-child { margin-top: 0; }
+        
+        .sidebar { position: sticky; top: 100px; }
+        .sidebar-card { background: var(--color-white); padding: 32px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: 24px; }
+        .sidebar-card h4 { margin-top: 0; margin-bottom: 16px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--color-navy); }
+        .sidebar-card p { font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 20px; }
+        .sidebar-card .btn { width: 100%; text-align: center; justify-content: center; }
+        
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-md); border: none; cursor: pointer; transition: all var(--transition); text-decoration: none; }
+        .btn-primary { background: var(--color-burgundy); color: var(--color-white); }
+        .btn-primary:hover { background: var(--color-burgundy-light); color: var(--color-white); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        
+        .phone-link { display: block; text-align: center; margin-top: 16px; font-size: 0.95rem; color: var(--color-text-light); }
+        .phone-link a { font-weight: 600; color: var(--color-burgundy); }
+        
+        .toc { background: var(--color-cream); padding: 24px; border-radius: var(--radius-md); }
+        .toc h4 { margin: 0 0 12px 0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-light); }
+        .toc ul { list-style: none; margin: 0; padding: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { font-size: 0.9rem; color: var(--color-text); }
+        .toc a:hover { color: var(--color-burgundy); }
+        
+        .highlight-box { background: var(--color-cream); border-left: 4px solid var(--color-gold); padding: 24px 28px; margin: 32px 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+        .highlight-box p:last-child { margin-bottom: 0; }
+        .highlight-box.success { border-left-color: var(--color-success); background: #f0f7f4; }
+        .highlight-box.warning { border-left-color: #c9a227; background: #fdf8e8; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.95rem; }
+        th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--color-cream-dark); }
+        th { background: var(--color-cream); font-weight: 600; color: var(--color-navy); }
+        tr:hover td { background: var(--color-cream); }
+        
+        ul, ol { margin: 20px 0; padding-left: 24px; }
+        li { margin-bottom: 10px; }
+        strong { color: var(--color-navy); }
+        
+        .cta-section { background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-light) 100%); padding: 60px 0; text-align: center; }
+        .cta-section h2 { color: var(--color-white); margin: 0 0 16px 0; }
+        .cta-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+        .cta-section .btn-primary { background: var(--color-white); color: var(--color-burgundy); }
+        .cta-section .btn-primary:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .cta-contact { margin-top: 20px; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .cta-contact a { color: var(--color-white); font-weight: 500; }
+        
+        .footer { background: var(--color-navy); color: rgba(255, 255, 255, 0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand p { margin-top: 16px; font-size: 0.95rem; line-height: 1.7; }
+        .footer h4 { color: var(--color-white); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; transition: color var(--transition); }
+        .footer ul a:hover { color: var(--color-gold-light); }
+        .footer-bottom { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        
+        @media (max-width: 1024px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .main-content { padding: 32px 24px; }
+            .sidebar { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo"><div class="logo-text"><span class="the">The</span><span class="main">Mortgage Hunter</span></div></a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Homebuyers</a>
+                        <a href="renewals-switches.html">Renewals &amp; Switches</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="self-employed.html">Self-Employed Mortgages</a>
+                        <a href="new-to-canada.html">New to Canada</a>
+                        <a href="investment-properties.html">Investment Properties</a>
+                        <a href="commercial.html">Commercial Lending</a>
+                        <a href="vacation-homes.html">Vacation &amp; Second Homes</a>
+                        <a href="renovation-mortgages.html">Renovation Mortgages</a>
+                        <a href="debt-consolidation.html">Debt Consolidation</a>
+                        <a href="credit-repair.html">Credit Repair</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="header-cta">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="#">Services</a><span>/</span>Credit Repair</div>
+                <h1>Credit Repair &amp; Rebuilding in Ontario</h1>
+                <p>Poor credit doesn't mean no mortgage. It means different options—and a roadmap to get where you want to be.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <article class="main-content">
+                    
+                    <h2 id="overview">Credit Challenges Don't Disqualify You</h2>
+                    
+                    <p>Rebuilding damaged credit to mortgage-qualifying territory typically takes <strong>12-24 months</strong> of consistent positive behavior. But here's what most people don't realize: you may not need to wait that long.</p>
+                    
+                    <p>B-lenders work with credit scores in the 500s. Private lenders focus on equity rather than credit entirely. And for those who want to reach prime lending (A-lenders with best rates), there's a clear path with predictable timelines.</p>
+                    
+                    <h2 id="credit-ranges">Understanding Credit Score Ranges</h2>
+                    
+                    <p>Canadian credit scores range from 300 to 900. Here's what each range means for mortgage options:</p>
+                    
+                    <table>
+                        <thead><tr><th>Score Range</th><th>Rating</th><th>Mortgage Options</th></tr></thead>
+                        <tbody>
+                            <tr><td>760-900</td><td>Excellent</td><td>Best rates from A-lenders</td></tr>
+                            <tr><td>725-759</td><td>Very Good</td><td>Competitive rates from A-lenders</td></tr>
+                            <tr><td>660-724</td><td>Good</td><td>Most mortgages available</td></tr>
+                            <tr><td>600-659</td><td>Fair</td><td>CMHC-insured possible, some A-lenders</td></tr>
+                            <tr><td>560-599</td><td>Below Average</td><td>B-lenders, 20% down required</td></tr>
+                            <tr><td>300-559</td><td>Poor</td><td>Private lenders, 25-35% down</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>The average Canadian credit score is <strong>762</strong>. If you're below that, you're not alone—and there are clear steps to improve.</p>
+                    
+                    <h2 id="five-factors">The Five Factors That Determine Your Score</h2>
+                    
+                    <table>
+                        <thead><tr><th>Factor</th><th>Weight</th><th>What It Measures</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Payment History</strong></td><td>35%</td><td>On-time payments, late payments, collections</td></tr>
+                            <tr><td><strong>Credit Utilization</strong></td><td>30%</td><td>% of available credit you're using</td></tr>
+                            <tr><td><strong>Length of History</strong></td><td>15%</td><td>Age of oldest account, average age</td></tr>
+                            <tr><td><strong>Credit Mix</strong></td><td>10%</td><td>Variety of credit types (cards, loans, etc.)</td></tr>
+                            <tr><td><strong>New Credit</strong></td><td>10%</td><td>Recent inquiries and new accounts</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p>Payment history and utilization together account for <strong>65% of your score</strong>. Focus here for the fastest improvements.</p>
+                    
+                    <h2 id="how-long">How Long Negative Items Stay on Your Report</h2>
+                    
+                    <ul>
+                        <li><strong>Late payments:</strong> 6 years from date reported</li>
+                        <li><strong>Collections:</strong> 6 years from date of first default</li>
+                        <li><strong>Consumer proposal:</strong> 3 years after completion OR 6 years from filing (whichever comes first)</li>
+                        <li><strong>Bankruptcy (first time):</strong> 6-7 years after discharge (varies by bureau and province)</li>
+                        <li><strong>Bankruptcy (second+):</strong> 14 years</li>
+                        <li><strong>Hard inquiries:</strong> 3-6 years (impact on score fades after ~12 months)</li>
+                    </ul>
+                    
+                    <h2 id="rebuild-strategies">Credit Rebuilding Strategies That Actually Work in Canada</h2>
+                    
+                    <h3>1. Dispute Errors First (Fastest Win)</h3>
+                    
+                    <p>Studies suggest <strong>30-34% of Canadian credit reports contain at least one error</strong>. Disputing inaccuracies is the fastest legal way to boost your score. Both Equifax and TransUnion offer free online dispute processes—investigations must be completed within 30 days.</p>
+                    
+                    <p>You can dispute: accounts you don't recognize, incorrect payment histories, wrong balances, and items that should have aged off after 6 years.</p>
+                    
+                    <h3>2. Utilization Optimization (30-60 Day Impact)</h3>
+                    
+                    <p>Credit card companies report balances once monthly (usually on statement date). Paying down balances before that date reports lower utilization to bureaus.</p>
+                    
+                    <p><strong>Example:</strong> Someone with $8,000 in credit limits carrying $6,000 (75% utilization) could see meaningful improvement within 30-60 days by paying down to $2,000 (25% utilization).</p>
+                    
+                    <p>Target: Keep utilization below <strong>30%</strong>. Ideal: 10-20%.</p>
+                    
+                    <h3>3. Secured Credit Cards</h3>
+                    
+                    <p>When regular cards aren't accessible, secured cards provide a path. Your deposit serves as collateral—make purchases, pay on time, build history.</p>
+                    
+                    <ul>
+                        <li><strong>Neo Secured Mastercard:</strong> $50 minimum deposit</li>
+                        <li><strong>Refresh Secured Card:</strong> $200 deposit, reports to both bureaus, no annual fee</li>
+                    </ul>
+                    
+                    <h3>4. Credit Builder Loans</h3>
+                    
+                    <ul>
+                        <li><strong>Borrowell Credit Builder:</strong> $5-25 bi-weekly, no credit check</li>
+                        <li><strong>KOHO Credit Building:</strong> $5-10 monthly</li>
+                        <li><strong>Spring Financial Foundation:</strong> Results in $750 saved at term end</li>
+                    </ul>
+                    
+                    <div class="highlight-box warning">
+                        <p><strong>Canada-specific note:</strong> Becoming an authorized user on someone else's credit card does NOT help build credit in Canada. Unlike the US, Canadian credit bureaus don't report authorized user accounts to your credit file. This popular American strategy doesn't work here.</p>
+                    </div>
+                    
+                    <h2 id="timelines">Realistic Rebuilding Timelines</h2>
+                    
+                    <table>
+                        <thead><tr><th>Starting Point</th><th>Time to 660+ (Good)</th><th>Time to 680+ (A-Lender)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Minor issues (1-2 late payments)</td><td>6-12 months</td><td>12-18 months</td></tr>
+                            <tr><td>Below average (580-659)</td><td>12-18 months</td><td>18-24 months</td></tr>
+                            <tr><td>Poor (below 575)</td><td>12-24 months</td><td>24-36 months</td></tr>
+                            <tr><td>Post-bankruptcy</td><td>24-36 months</td><td>36+ months</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>After bankruptcy or consumer proposal:</strong> Most lenders require 2 years since discharge without any 60-day late payments before considering applications.</p>
+                    
+                    <h2 id="lender-options">Mortgage Options at Each Credit Level</h2>
+                    
+                    <h3>A-Lenders (680+ Credit)</h3>
+                    <p>Major banks, credit unions, monoline lenders. Best rates, lowest costs, full stress test applies. Minimum 5% down for insured mortgages.</p>
+                    
+                    <h3>B-Lenders (500-650 Credit)</h3>
+                    <p>Home Trust, Equitable Bank, MERIX/NPX, Haventree Bank—accessible through brokers. Rates typically <strong>1-2% higher</strong> than prime, plus ~1% lender fee. Minimum 20% down required (mortgage insurance not available).</p>
+                    
+                    <h3>Private Lenders (Below 500 or Recent Bankruptcy)</h3>
+                    <p>Focus on equity rather than credit. Rates between <strong>6-15%</strong>, fees of 3-6%, terms of 1-3 years. Require substantial equity (25-35% down). Used as bridge financing while rebuilding for refinance into better terms.</p>
+                    
+                    <div class="highlight-box success">
+                        <p><strong>The broker advantage:</strong> A mortgage broker can map your current credit situation to available lenders, create a realistic timeline to better options, and structure your application to maximize approval chances at each stage.</p>
+                    </div>
+                    
+                    <h2 id="credit-repair-companies">What Credit Repair Companies Can (and Can't) Do</h2>
+                    
+                    <p>Credit repair companies operating in Canada face strict legal limitations:</p>
+                    <ul>
+                        <li>They <strong>cannot remove accurate negative information</strong></li>
+                        <li>They <strong>cannot charge upfront fees</strong> (prohibited by Canadian consumer protection law)</li>
+                        <li>They receive no special treatment from credit bureaus</li>
+                    </ul>
+                    
+                    <p>Everything a credit repair company can legally do, you can do yourself. File disputes directly with Equifax (1-866-828-5961) and TransUnion (1-800-663-9980).</p>
+                    
+                    <p><strong>Better alternative:</strong> Non-profit credit counselling agencies like Credit Canada or Credit Counselling Society offer free guidance, budget analysis, and debt management programs.</p>
+                    
+                    <h2 id="free-resources">Free Credit Monitoring Resources</h2>
+                    
+                    <ul>
+                        <li><strong>Borrowell:</strong> Free weekly Equifax credit scores and full reports (borrowell.com)</li>
+                        <li><strong>Credit Karma Canada:</strong> Free TransUnion scores and monitoring (creditkarma.ca)</li>
+                        <li><strong>Equifax:</strong> Free monthly access through myEquifax accounts</li>
+                        <li><strong>TransUnion:</strong> Free Consumer Disclosure through their website</li>
+                    </ul>
+                    
+                    <p>Use both Borrowell and Credit Karma to see both bureau files—not all creditors report to both, so your scores may differ.</p>
+                    
+                    <h2 id="next-steps">Your Next Steps</h2>
+                    
+                    <ol>
+                        <li><strong>Check your credit scores</strong> through free services (Borrowell for Equifax, Credit Karma for TransUnion)</li>
+                        <li><strong>Review your reports for errors</strong> and dispute anything inaccurate</li>
+                        <li><strong>Identify quick wins</strong>—high utilization is fastest to fix</li>
+                        <li><strong>Talk to a broker about your current options</strong>—you may qualify for more than you think</li>
+                    </ol>
+                    
+                    <p>Credit challenges don't have to mean indefinite delay of homeownership. With proper guidance and the right lending partners, the path from damaged credit to mortgage approval is measurable and achievable.</p>
+                    
+                </article>
+                
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h4>Not Sure Where You Stand?</h4>
+                        <p>Let me review your credit situation and map out your options—what's available now, and what's possible with time.</p>
+                        <a href="contact.html" class="btn btn-primary">Get a Credit Review</a>
+                        <p class="phone-link">Or call <a href="tel:7053236779">705.323.6779</a></p>
+                    </div>
+                    
+                    <div class="sidebar-card toc">
+                        <h4>On This Page</h4>
+                        <ul>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#credit-ranges">Score Ranges</a></li>
+                            <li><a href="#five-factors">The Five Factors</a></li>
+                            <li><a href="#how-long">Negative Item Duration</a></li>
+                            <li><a href="#rebuild-strategies">Rebuilding Strategies</a></li>
+                            <li><a href="#timelines">Realistic Timelines</a></li>
+                            <li><a href="#lender-options">Lender Options</a></li>
+                            <li><a href="#credit-repair-companies">Credit Repair Companies</a></li>
+                            <li><a href="#free-resources">Free Resources</a></li>
+                            <li><a href="#next-steps">Next Steps</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Map Your Path to Homeownership?</h2>
+            <p>Let's look at where you are, where you want to be, and how to get there.</p>
+            <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+            <p class="cta-contact">Or call directly: <a href="tel:7053236779">705.323.6779</a></p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><div class="logo-text"><span class="the" style="color: rgba(255,255,255,0.5);">The</span><span class="main" style="color: #fff;">Mortgage Hunter</span></div><p>Stephanie Hunter Smith<br>Licensed Mortgage Professional<br>Serving Simcoe County &amp; Ontario</p></div>
+                <div><h4>Buying</h4><ul><li><a href="first-time-buyers.html">First-Time Buyers</a></li><li><a href="new-to-canada.html">New to Canada</a></li><li><a href="credit-repair.html">Credit Repair</a></li></ul></div>
+                <div><h4>Homeowners</h4><ul><li><a href="renewals-switches.html">Renewals &amp; Switches</a></li><li><a href="refinancing.html">Refinancing</a></li><li><a href="debt-consolidation.html">Debt Consolidation</a></li><li><a href="renovation-mortgages.html">Renovation Mortgages</a></li></ul></div>
+                <div><h4>Investors</h4><ul><li><a href="investment-properties.html">Investment Properties</a></li><li><a href="commercial.html">Commercial Lending</a></li><li><a href="vacation-homes.html">Vacation Homes</a></li><li><a href="self-employed.html">Self-Employed</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 The Mortgage Hunter. All rights reserved.</p><p><a href="tel:7053236779">705.323.6779</a></p></div>
+        </div>
+    </footer>
+    <script>
+    document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("nav-open");
+        this.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>

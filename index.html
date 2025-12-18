@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mortgage Hunter | Stephanie Hunter Smith | Ontario Mortgage Broker</title>
+    <meta name="description" content="Expert mortgage broker serving Simcoe County and Ontario. First-time buyers, renewals, refinancing, self-employed, investment properties. Get the right mortgage for your situation.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2a3a;
+            --color-navy-light: #2d4055;
+            --color-burgundy: #6b2d3a;
+            --color-burgundy-light: #8a3d4d;
+            --color-cream: #faf8f5;
+            --color-cream-dark: #f0ebe4;
+            --color-gold: #b8956b;
+            --color-gold-light: #d4b896;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-white: #ffffff;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 42, 58, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 42, 58, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 42, 58, 0.16);
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            --transition: 0.3s ease;
+        }
+        
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-cream);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.25;
+            color: var(--color-navy);
+        }
+        
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.875rem); }
+        h4 { font-size: 1.25rem; }
+        
+        a {
+            color: var(--color-burgundy);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+        
+        a:hover {
+            color: var(--color-burgundy-light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* ============ HEADER ============ */
+        .header {
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-cream-dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .logo-text .the {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+        
+        .logo-text .main {
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.15em;
+            color: var(--color-navy);
+            text-transform: uppercase;
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav a {
+            padding: 10px 16px;
+            color: var(--color-text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+        }
+        
+        .nav a:hover {
+            background: var(--color-cream);
+            color: var(--color-burgundy);
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--color-white);
+            min-width: 260px;
+            padding: 12px 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all var(--transition);
+        }
+        
+        .nav-dropdown:hover .nav-dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .nav-dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            border-radius: 0;
+            font-size: 0.9rem;
+        }
+        
+        .nav-dropdown-content a:hover {
+            background: var(--color-cream);
+        }
+        
+        .header-cta {
+            background: var(--color-burgundy);
+            color: var(--color-white) !important;
+            padding: 12px 24px !important;
+            border-radius: var(--radius-md) !important;
+            font-weight: 500;
+        }
+        
+        .header-cta:hover {
+            background: var(--color-burgundy-light);
+            color: var(--color-white) !important;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--color-navy);
+            margin: 6px 0;
+            transition: var(--transition);
+        }
+        
+        /* ============ HERO ============ */
+        .hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            color: var(--color-white);
+            margin-bottom: 24px;
+        }
+        
+        .hero-content h1 span {
+            color: var(--color-gold-light);
+        }
+        
+        .hero-content p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            max-width: 540px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-gold-light);
+            color: var(--color-navy);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            color: var(--color-white);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--color-gold);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+        }
+        
+        /* ============ SERVICES GRID ============ */
+        .services {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            margin-top: 16px;
+        }
+        
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-burgundy);
+            margin-bottom: 12px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: var(--color-white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-cream-dark);
+            transition: all var(--transition);
+            text-decoration: none;
+            display: block;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--color-gold);
+        }
+        
+        .service-card h4 {
+            margin-bottom: 12px;
+            transition: color var(--transition);
+        }
+        
+        .service-card:hover h4 {
+            color: var(--color-burgundy);
+        }
+        
+        .service-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .service-card .arrow {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--color-burgundy);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        /* ============ WHY SECTION ============ */
+        .why-section {
+            background: var(--color-white);
+            padding: 100px 0;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .why-content h2 {
+            margin-bottom: 24px;
+        }
+        
+        .why-content p {
+            margin-bottom: 20px;
+            color: var(--color-text-light);
+        }
+        
+        .why-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+        
+        .why-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .why-list .icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--color-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-burgundy);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        
+        .why-list strong {
+            display: block;
+            color: var(--color-navy);
+            margin-bottom: 4px;
+        }
+        
+        .why-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        .stat-card {
+            background: var(--color-cream);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-burgundy);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .stat-card .label {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-light) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+        
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        
+        .cta-section .btn-primary {
+            background: var(--color-white);
+            color: var(--color-burgundy);
+        }
+        
+        .cta-section .btn-primary:hover {
+            background: var(--color-cream);
+            color: var(--color-burgundy);
+        }
+        
+        .cta-contact {
+            margin-top: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+        
+        .cta-contact a {
+            color: var(--color-white);
+            font-weight: 500;
+        }
+        
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--color-navy);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        
+        .footer-brand p {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .footer h4 {
+            color: var(--color-white);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .footer ul {
+            list-style: none;
+        }
+        
+        .footer ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer ul a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: color var(--transition);
+        }
+        
+        .footer ul a:hover {
+            color: var(--color-gold-light);
+        }
+        
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 60px 0 80px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <span class="the">The</span>
+                    <span class="main">Mortgage Hunter</span>
+                </div>
+            </a>
+            
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Homebuyers</a>
+                        <a href="renewals-switches.html">Renewals &amp; Switches</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="self-employed.html">Self-Employed Mortgages</a>
+                        <a href="new-to-canada.html">New to Canada</a>
+                        <a href="investment-properties.html">Investment Properties</a>
+                        <a href="commercial.html">Commercial Lending</a>
+                        <a href="vacation-homes.html">Vacation &amp; Second Homes</a>
+                        <a href="renovation-mortgages.html">Renovation Mortgages</a>
+                        <a href="debt-consolidation.html">Debt Consolidation</a>
+                        <a href="credit-repair.html">Credit Repair</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="header-cta">Contact</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1>Finding the <span>Right Mortgage</span> for Your Life</h1>
+                    <p>Whether you're buying your first home, renewing, refinancing, or investing—I'll hunt down the best mortgage for your unique situation from over 30 lenders.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get Started</a>
+                        <a href="tel:7053236779" class="btn btn-outline">Call 705.323.6779</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/stephanie.jpg" alt="Stephanie Hunter Smith - The Mortgage Hunter">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Services</span>
+                <h2>Every Mortgage Situation Has a Solution</h2>
+                <p>Banks offer their products. I offer options—matching you with the right lender for your specific circumstances.</p>
+            </div>
+            
+            <div class="services-grid">
+                <a href="first-time-buyers.html" class="service-card">
+                    <h4>First-Time Homebuyers</h4>
+                    <p>Navigate programs like FHSA, the $60K RRSP Home Buyers' Plan, and Simcoe County's $50K forgivable loan. I'll make sure you don't leave money on the table.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="renewals-switches.html" class="service-card">
+                    <h4>Renewals &amp; Switches</h4>
+                    <p>Don't just sign your bank's renewal letter. 60% of Canadians leave thousands on the table. The stress test no longer applies to switches—let's shop your mortgage.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="refinancing.html" class="service-card">
+                    <h4>Refinancing</h4>
+                    <p>Access up to 80% of your home's value for renovations, investments, or debt consolidation. I'll calculate whether breaking your mortgage makes financial sense.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="self-employed.html" class="service-card">
+                    <h4>Self-Employed Mortgages</h4>
+                    <p>Tax-optimized returns shouldn't mean mortgage rejection. Alternative documentation programs and the right lender make homeownership accessible.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="new-to-canada.html" class="service-card">
+                    <h4>New to Canada</h4>
+                    <p>Your foreign credit doesn't transfer—but you're not starting from scratch. Newcomer programs offer paths to homeownership with alternative documentation.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="investment-properties.html" class="service-card">
+                    <h4>Investment Properties</h4>
+                    <p>Different rules, different lenders, different strategies. From your first rental to building a portfolio, I know which lenders work for investors.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="commercial.html" class="service-card">
+                    <h4>Commercial Lending</h4>
+                    <p>Multi-unit residential, retail spaces, and business premises. DSCR-based qualification with government-backed programs for eligible businesses.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="vacation-homes.html" class="service-card">
+                    <h4>Vacation &amp; Second Homes</h4>
+                    <p>Cottage country financing is its own specialty. Type A vs Type B classification, credit union options, and strategies banks don't tell you about.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="renovation-mortgages.html" class="service-card">
+                    <h4>Renovation Mortgages</h4>
+                    <p>Finance improvements at purchase with Purchase Plus programs, or access equity through refinancing and HELOCs. Match the right vehicle to your project.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="debt-consolidation.html" class="service-card">
+                    <h4>Debt Consolidation</h4>
+                    <p>Convert 20% credit card rates to sub-5% mortgage rates. Save hundreds monthly—but only if we structure it right and address the root cause.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+                
+                <a href="credit-repair.html" class="service-card">
+                    <h4>Credit Repair &amp; Rebuilding</h4>
+                    <p>Poor credit doesn't mean no mortgage. I'll map your path from current score to mortgage-ready, with B-lender and private options along the way.</p>
+                    <span class="arrow">Learn more →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-grid">
+                <div class="why-content">
+                    <span class="section-label">Why Work With Me</span>
+                    <h2>Your Bank Works for the Bank. I Work for You.</h2>
+                    <p>When you walk into a bank, they show you their products. When you work with me, I shop your application across 30+ lenders—finding the one that fits your situation, not just the one that's convenient for them.</p>
+                    
+                    <ul class="why-list">
+                        <li>
+                            <span class="icon">1</span>
+                            <div>
+                                <strong>Access to 30+ Lenders</strong>
+                                Major banks, credit unions, monolines, and alternative lenders—including options you can't access directly.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">2</span>
+                            <div>
+                                <strong>No Cost to You</strong>
+                                For standard mortgages, my services are free. Lenders pay my commission—you get expert guidance at no charge.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">3</span>
+                            <div>
+                                <strong>Local Knowledge</strong>
+                                Based in Simcoe County, I understand the local market—from Orillia to Barrie to Midland and everywhere in between.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="why-stats">
+                    <div class="stat-card">
+                        <div class="number">30+</div>
+                        <div class="label">Lenders Available</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">$0</div>
+                        <div class="label">Cost to You</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">705</div>
+                        <div class="label">Local Area Code</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">11</div>
+                        <div class="label">Specialty Areas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Find Your Mortgage?</h2>
+            <p>Whether you know exactly what you need or you're just starting to explore your options, let's talk.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <p class="cta-contact">Or call directly: <a href="tel:7053236779">705.323.6779</a></p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">
+                        <span class="the" style="color: rgba(255,255,255,0.5);">The</span>
+                        <span class="main" style="color: #fff;">Mortgage Hunter</span>
+                    </div>
+                    <p>Stephanie Hunter Smith<br>Licensed Mortgage Professional<br>Serving Simcoe County &amp; Ontario</p>
+                </div>
+                
+                <div>
+                    <h4>Buying</h4>
+                    <ul>
+                        <li><a href="first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="new-to-canada.html">New to Canada</a></li>
+                        <li><a href="credit-repair.html">Credit Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Homeowners</h4>
+                    <ul>
+                        <li><a href="renewals-switches.html">Renewals &amp; Switches</a></li>
+                        <li><a href="refinancing.html">Refinancing</a></li>
+                        <li><a href="debt-consolidation.html">Debt Consolidation</a></li>
+                        <li><a href="renovation-mortgages.html">Renovation Mortgages</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Investors</h4>
+                    <ul>
+                        <li><a href="investment-properties.html">Investment Properties</a></li>
+                        <li><a href="commercial.html">Commercial Lending</a></li>
+                        <li><a href="vacation-homes.html">Vacation Homes</a></li>
+                        <li><a href="self-employed.html">Self-Employed</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Mortgage Hunter. All rights reserved.</p>
+                <p><a href="tel:7053236779">705.323.6779</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("nav-open");
+        this.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Stephanie Hunter Smith | The Mortgage Hunter | Simcoe County Mortgage Broker</title>
+    <meta name="description" content="Meet Stephanie Hunter Smith, licensed mortgage professional serving Simcoe County and Ontario. Local expertise, 30+ lender access, personalized mortgage guidance.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-navy: #1a2a3a;
+            --color-navy-light: #2d4055;
+            --color-burgundy: #6b2d3a;
+            --color-burgundy-light: #8a3d4d;
+            --color-cream: #faf8f5;
+            --color-cream-dark: #f0ebe4;
+            --color-gold: #b8956b;
+            --color-gold-light: #d4b896;
+            --color-text: #2c3e50;
+            --color-text-light: #5a6c7d;
+            --color-white: #ffffff;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Outfit', -apple-system, sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(26, 42, 58, 0.08);
+            --shadow-md: 0 4px 20px rgba(26, 42, 58, 0.12);
+            --shadow-lg: 0 8px 40px rgba(26, 42, 58, 0.16);
+            
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            
+            --transition: 0.3s ease;
+        }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); font-size: 17px; line-height: 1.7; color: var(--color-text); background-color: var(--color-cream); }
+        
+        h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.25; color: var(--color-navy); }
+        h1 { font-size: clamp(2.25rem, 4.5vw, 3rem); }
+        h2 { font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-bottom: 20px; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); margin-bottom: 16px; }
+        
+        p { margin-bottom: 20px; }
+        a { color: var(--color-burgundy); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--color-burgundy-light); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Header */
+        .header { background: var(--color-white); border-bottom: 1px solid var(--color-cream-dark); position: sticky; top: 0; z-index: 100; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-text .the { font-family: var(--font-display); font-style: italic; font-size: 0.9rem; color: var(--color-text-light); }
+        .logo-text .main { font-family: var(--font-body); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.15em; color: var(--color-navy); text-transform: uppercase; }
+        .nav { display: flex; align-items: center; gap: 8px; }
+        .nav a { padding: 10px 16px; color: var(--color-text); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-sm); transition: all var(--transition); }
+        .nav a:hover { background: var(--color-cream); color: var(--color-burgundy); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-content { position: absolute; top: 100%; left: 0; background: var(--color-white); min-width: 260px; padding: 12px 0; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); opacity: 0; visibility: hidden; transform: translateY(8px); transition: all var(--transition); }
+        .nav-dropdown:hover .nav-dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-content a { display: block; padding: 10px 20px; border-radius: 0; font-size: 0.9rem; }
+        .nav-dropdown-content a:hover { background: var(--color-cream); }
+        .header-cta { background: var(--color-burgundy); color: var(--color-white) !important; padding: 12px 24px !important; border-radius: var(--radius-md) !important; font-weight: 500; }
+        .header-cta:hover { background: var(--color-burgundy-light); color: var(--color-white) !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; padding: 8px; cursor: pointer; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--color-navy); margin: 6px 0; }
+        
+        /* About Hero */
+        .about-hero {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .about-hero-inner {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-hero-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .about-hero-content h1 {
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+        
+        .about-hero-content p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        
+        .about-hero-content .title {
+            color: var(--color-gold-light);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        /* About Content */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content h2 {
+            margin-top: 48px;
+        }
+        
+        .about-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .value-card {
+            background: var(--color-white);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        
+        .value-card h3 {
+            margin-bottom: 12px;
+        }
+        
+        .value-card p {
+            color: var(--color-text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+        }
+        
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-light) 100%); padding: 60px 0; text-align: center; }
+        .cta-section h2 { color: var(--color-white); margin: 0 0 16px 0; }
+        .cta-section p { color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; max-width: 600px; margin: 0 auto 28px; }
+        
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; border-radius: var(--radius-md); border: none; cursor: pointer; transition: all var(--transition); text-decoration: none; }
+        .btn-primary { background: var(--color-white); color: var(--color-burgundy); }
+        .btn-primary:hover { background: var(--color-cream); color: var(--color-burgundy); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        
+        .cta-contact { margin-top: 20px; color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+        .cta-contact a { color: var(--color-white); font-weight: 500; }
+        
+        /* Footer */
+        .footer { background: var(--color-navy); color: rgba(255, 255, 255, 0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand p { margin-top: 16px; font-size: 0.95rem; line-height: 1.7; }
+        .footer h4 { color: var(--color-white); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 12px; }
+        .footer ul a { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; transition: color var(--transition); }
+        .footer ul a:hover { color: var(--color-gold-light); }
+        .footer-bottom { padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+        
+        @media (max-width: 1024px) {
+            .about-hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .about-hero-image { max-width: 350px; margin: 0 auto; }
+            .value-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    <span class="the">The</span>
+                    <span class="main">Mortgage Hunter</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#">Services</a>
+                    <div class="nav-dropdown-content">
+                        <a href="first-time-buyers.html">First-Time Homebuyers</a>
+                        <a href="renewals-switches.html">Renewals &amp; Switches</a>
+                        <a href="refinancing.html">Refinancing</a>
+                        <a href="self-employed.html">Self-Employed Mortgages</a>
+                        <a href="new-to-canada.html">New to Canada</a>
+                        <a href="investment-properties.html">Investment Properties</a>
+                        <a href="commercial.html">Commercial Lending</a>
+                        <a href="vacation-homes.html">Vacation &amp; Second Homes</a>
+                        <a href="renovation-mortgages.html">Renovation Mortgages</a>
+                        <a href="debt-consolidation.html">Debt Consolidation</a>
+                        <a href="credit-repair.html">Credit Repair</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="header-cta">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-inner">
+                <div class="about-hero-image">
+                    <img src="images/stephanie.jpg" alt="Stephanie Hunter Smith - The Mortgage Hunter">
+                </div>
+                <div class="about-hero-content">
+                    <h1>Stephanie Hunter Smith</h1>
+                    <span class="title">Licensed Mortgage Professional</span>
+                    <p>I help people in Simcoe County and across Ontario navigate the mortgage process—finding the right lender, the right rate, and the right terms for their unique situation. Whether you're buying your first home, renewing, refinancing, or investing, I'll hunt down the best mortgage for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                
+                <h2>Why "The Mortgage Hunter"?</h2>
+                
+                <p>Because that's exactly what I do. When you walk into a bank, they show you their products. When you work with me, I hunt through 30+ lenders to find the one that fits your situation—not just the one that's convenient.</p>
+                
+                <p>Different lenders have different appetites. Some love first-time buyers. Others specialize in self-employed income. Some have the best rates on renewals, while others are more flexible with credit challenges. My job is to know which lender works for which situation—and to present your application in the way that gets you approved.</p>
+                
+                <h2>What I Believe</h2>
+                
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎯</div>
+                        <h3>Options Matter</h3>
+                        <p>The right mortgage isn't about the lowest rate—it's about the best fit. I show you what's actually available for your situation.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💬</div>
+                        <h3>Straight Talk</h3>
+                        <p>I'll tell you what you need to hear, not what you want to hear. No surprises, no runaround.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🏡</div>
+                        <h3>Local Knowledge</h3>
+                        <p>I live and work in Simcoe County. I understand this market, these communities, and the people in them.</p>
+                    </div>
+                </div>
+                
+                <h2>How I Work</h2>
+                
+                <p>Every mortgage conversation starts the same way: understanding your situation. What are you trying to accomplish? What does your timeline look like? What's your comfort level with risk? Only after understanding the full picture do I start looking at lenders and rates.</p>
+                
+                <p>For most standard mortgages, my services cost you nothing—lenders pay my commission when your mortgage closes. For more complex situations requiring alternative or private lending, we'll discuss any fees upfront before proceeding.</p>
+                
+                <p>I'm not here to pressure anyone into anything. Some people are ready to buy now. Others need 6-12 months to get their finances in order. Either way, I'd rather give you honest guidance than push you into a decision you're not ready for.</p>
+                
+                <h2>The Areas I Serve</h2>
+                
+                <p>Based in Simcoe County, I work with clients across Ontario—from Orillia to Barrie, Midland to Collingwood, and everywhere in between. Most of my work is local, but mortgages don't require in-person meetings. If you're buying property in Ontario, I can help regardless of where you're currently located.</p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start the Conversation?</h2>
+            <p>No pressure, no commitment. Let's talk about your situation and see what's possible.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <p class="cta-contact">Or call directly: <a href="tel:7053236779">705.323.6779</a></p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">
+                        <span class="the" style="color: rgba(255,255,255,0.5);">The</span>
+                        <span class="main" style="color: #fff;">Mortgage Hunter</span>
+                    </div>
+                    <p>Stephanie Hunter Smith<br>Licensed Mortgage Professional<br>Serving Simcoe County &amp; Ontario</p>
+                </div>
+                <div>
+                    <h4>Buying</h4>
+                    <ul>
+                        <li><a href="first-time-buyers.html">First-Time Buyers</a></li>
+                        <li><a href="new-to-canada.html">New to Canada</a></li>
+                        <li><a href="credit-repair.html">Credit Repair</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Homeowners</h4>
+                    <ul>
+                        <li><a href="renewals-switches.html">Renewals &amp; Switches</a></li>
+                        <li><a href="refinancing.html">Refinancing</a></li>
+                        <li><a href="debt-consolidation.html">Debt Consolidation</a></li>
+                        <li><a href="renovation-mortgages.html">Renovation Mortgages</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Investors</h4>
+                    <ul>
+                        <li><a href="investment-properties.html">Investment Properties</a></li>
+                        <li><a href="commercial.html">Commercial Lending</a></li>
+                        <li><a href="vacation-homes.html">Vacation Homes</a></li>
+                        <li><a href="self-employed.html">Self-Employed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Mortgage Hunter. All rights reserved.</p>
+                <p><a href="tel:7053236779">705.323.6779</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.querySelector(".mobile-menu-btn").addEventListener("click", function() {
+        document.querySelector(".nav").classList.toggle("nav-open");
+        this.classList.toggle("active");
+    });
+    </script>
+</body>
+</html>
